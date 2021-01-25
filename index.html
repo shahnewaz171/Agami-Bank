@@ -15,12 +15,12 @@
         <h1 class="text-center">Welcome to Agami Bank</h1>
         <div class="submit-area p-5 mt-5">
             <h4 class="pb-3">Login</h4>
-            <input type="text" name="name" class="form-control mb-4" placeholder="Email..">
+            <input type="text" name="name" class="form-control mb-4" placeholder="Enter Your Email">
             <input type="password" name="password" class="form-control mb-4" placeholder="Password..">
             <button id="login" class="btn btn-success border-0">Enter</button>
         </div>
     </div>
-    
+
     <div id="transection-area">
         <h1 class="mb-5">Transaction Area</h1>
         <div class="row">
@@ -29,19 +29,35 @@
                     <h5>Deposit</h5>
                     <h2>$ 00</h2>
                 </div>
-            </div class="col-md-4">
+            </div>
             <div class="col-md-4">
                 <div class="withdraw status">
                     <h5>Withdraw</h5>
                     <h2>$ 00</h2>
                 </div>
-            </div class="col-md-4">
+            </div>
             <div class="col-md-4">
                 <div class="balance status">
                     <h5>Balance</h5>
                     <h2>$ 1240</h2>
                 </div>
-            </div class="col-md-4">
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="transaction-submit-area">
+                    <h5>Deposit</h5>
+                    <input type="text" class="form-control mb-4" placeholder="$ Amount you want to reposit">
+                    <button class="btn btn-success">Deposit</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="transaction-submit-area">
+                    <h5>Withdraw</h5>
+                    <input type="text" class="form-control mb-4" placeholder="$ Amount you want to withdraw">
+                    <button class="btn btn-success">Withdraw</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -55,6 +71,9 @@
             transactionArea.style.display = 'block';
         })
     </script>
+
+
+
     <!-- JS File -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 </body>

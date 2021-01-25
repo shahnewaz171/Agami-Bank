@@ -1,19 +1,16 @@
 body{
     padding: 100px;
 }
-/* .bank-title{
-    text-align: center;
-} */
-#login-area{
-    display: none;
-}
 .submit-area{
     box-shadow: 5px 5px 10px gray;
     border-radius: 5px;
 }
-/* #transection-area{
+
+
+/* Transaction Area */
+#transection-area{
     display: none;
-} */
+}
 .deposit{
     background-color: slateblue;
 }
@@ -27,4 +24,10 @@ body{
     padding: 20px;
     border-radius: 10px;
     color: white;
+}
+.transaction-submit-area{
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 5px;
+    padding: 20px;
+    border-radius: 10px;
 }
