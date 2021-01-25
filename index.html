@@ -15,7 +15,7 @@
         <h1 class="text-center">Welcome to Agami Bank</h1>
         <div class="submit-area p-5 mt-5">
             <h4 class="pb-3">Login</h4>
-            <input type="text" name="name" class="form-control mb-4" placeholder="Enter Your Email">
+            <input type="text" name="name" class="form-control mb-4" placeholder="Your Email..">
             <input type="password" name="password" class="form-control mb-4" placeholder="Password..">
             <button id="login" class="btn btn-success border-0">Enter</button>
         </div>
@@ -27,7 +27,7 @@
             <div class="col-md-4">
                 <div class="deposit status">
                     <h5>Deposit</h5>
-                    <h2>$ 00</h2>
+                    <h2>$ <span id="currentDeposit">00</span></h2>
                 </div>
             </div>
             <div class="col-md-4">
@@ -39,7 +39,7 @@
             <div class="col-md-4">
                 <div class="balance status">
                     <h5>Balance</h5>
-                    <h2>$ 1240</h2>
+                    <h2>$ <span id="currentBalance">1205</span></h2>
                 </div>
             </div>
         </div>
@@ -47,15 +47,15 @@
             <div class="col-md-6">
                 <div class="transaction-submit-area">
                     <h5>Deposit</h5>
-                    <input type="text" class="form-control mb-4" placeholder="$ Amount you want to reposit">
-                    <button class="btn btn-success">Deposit</button>
+                    <input id="depositAmount" type="text" class="form-control mb-4" placeholder="$ Amount you want to reposit">
+                    <button id="addDeposit" class="btn btn-success">Deposit</button>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="transaction-submit-area">
                     <h5>Withdraw</h5>
                     <input type="text" class="form-control mb-4" placeholder="$ Amount you want to withdraw">
-                    <button class="btn btn-success">Withdraw</button>
+                    <button id="addWithdraw" class="btn btn-success">Withdraw</button>
                 </div>
             </div>
         </div>
@@ -63,6 +63,7 @@
 
 
     <script>
+        // Login button event handler
         var loginBtn = document.getElementById("login");
         loginBtn.addEventListener('click', function(){
             const loginArea = document.getElementById('login-area');
@@ -70,6 +71,33 @@
             const transactionArea = document.getElementById("transection-area");
             transactionArea.style.display = 'block';
         })
+
+        // Deposit button event handler
+        const depositBtn  = document.getElementById('addDeposit');
+        depositBtn.addEventListener('click', function(){
+            const depositAmount = document.getElementById("depositAmount").value;// Show the string type value
+            const depositNumber = parseFloat(depositAmount);//Converted String value to Number.
+            const currentDeposit = document.getElementById('currentDeposit').innerText; //For only input tag [innerText]
+            const currentDepositNumber = parseFloat(currentDeposit);
+            const totalDeposit = depositNumber + currentDepositNumber;
+            // console.log(totalDeposit);
+            document.getElementById('currentDeposit').innerText = totalDeposit; //transfer value depositAmount to currentDeposit
+            document.getElementById('depositAmount').value = ""; //empty input
+          
+            UpperSpanText('currentBalance', depositNumber);
+
+            // const currentBalance = document.getElementById('currentBalance').innerText;
+            // const currentBalanceNumber = parseFloat(currentBalance);
+            // const totalBalance = depositNumber + currentBalanceNumber;
+            // document.getElementById('currentBalance').innerText = totalBalance;
+        })
+
+        function UpperSpanText(id, depositNumber){
+            const currentBalance = document.getElementById(id).innerText;
+            const currentBalanceNumber = parseFloat(currentBalance);
+            const totalBalance = depositNumber + currentBalanceNumber;
+            document.getElementById('currentBalance').innerText = totalBalance;
+        }
     </script>
 
 
