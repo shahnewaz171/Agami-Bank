@@ -1,5 +1,7 @@
-body{
-    padding: 100px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 .submit-area{
     box-shadow: 5px 5px 10px gray;
@@ -12,13 +14,13 @@ body{
     display: none;
 }
 .deposit{
-    background-color: slateblue;
+    background-color: rgb(94, 81, 184);
 }
 .withdraw{
-    background-color: lightsalmon;
+    background-color: rgb(223, 108, 62);
 }
 .balance{
-    background-color: orange;
+    background-color: rgb(223, 158, 38);
 }
 .status{
     padding: 20px;
@@ -30,4 +32,7 @@ body{
     border-radius: 5px;
     padding: 20px;
     border-radius: 10px;
+}
+.input-group-text{
+    height: 38px;
 }

@@ -1,0 +1,39 @@
+@media only screen and (max-width: 767px){
+    /* body{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    } */
+    #login-area{
+        margin: 175px 18px;
+        margin-top: 10rem;
+    }
+    .mb-lg-3{
+        margin-bottom: 1rem;
+    }
+    .deposit-info{
+        margin: 1rem;
+        text-align: center;
+    }
+    #transection-area{
+        margin-top: 3rem;
+    }
+    #transection-area h1{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .withdraw-input{
+        margin-bottom: 4rem;
+    }
+    .pad{
+        padding: 22px;
+    }
+}
+@media only screen and (min-width: 768px){
+    body{
+        padding: 100px;
+    }
+    #transection-area h1{
+        margin-bottom: 3rem;
+    }
+}
