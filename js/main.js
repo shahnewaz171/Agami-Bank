@@ -34,11 +34,11 @@ function UpperSpanText(id, depositNumber){
     const currentBalance = document.getElementById(id).innerText;
     const currentBalanceNumber = parseFloat(currentBalance);
     const totalBalance = depositNumber + currentBalanceNumber;
-    if(isNaN(totalBalance)){
-        return true;
-    }
-    else{
+    if(totalBalance >= 0){
         document.getElementById(id).innerText = totalBalance;
+    }    
+    else if(isNaN(totalBalance)){
+        return true;
     }
 }
 
@@ -66,11 +66,11 @@ function UpperSpanText2(id, withdrawNumber){
     const currentBalance = document.getElementById(id).innerText;
     const currentBalanceNumber = parseFloat(currentBalance);
     const totalBalance = currentBalanceNumber + withdrawNumber;
-    if(isNaN(totalBalance)){
-        return true;
-    }
-    else{
+
+    if(totalBalance >= 0){
         document.getElementById(id).innerText = totalBalance;
     }
-    
+    else if(isNaN(totalBalance)){
+        return true;
+    }
 }
