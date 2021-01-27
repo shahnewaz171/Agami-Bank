@@ -10,7 +10,7 @@ loginBtn.addEventListener('submit', function(e){
 
 // Deposit button event handler
 const depositBtn  = document.getElementById('addDeposit');
-depositBtn.addEventListener('click', function(e){
+depositBtn.addEventListener('click', function(){
     const depositAmount = document.getElementById("depositAmount").value;// Show the string type value
     const depositNumber = parseFloat(depositAmount);//Converted String value to Number.
     // const currentDeposit = document.getElementById('currentDeposit').innerText; //For only input tag [innerText]
@@ -44,7 +44,7 @@ function UpperSpanText(id, depositNumber){
 
 // Withdraw button event handler
 const withdrawBtn = document.getElementById('addWithdraw');
-withdrawBtn.addEventListener('click', function(e){
+withdrawBtn.addEventListener('click', function(){
     const withdrawAmount = document.getElementById("withdrawAmount").value;
     const withdrawNumber = parseFloat(withdrawAmount);
     // const currentWithdraw = document.getElementById('currentWithdraw').innerText; 
